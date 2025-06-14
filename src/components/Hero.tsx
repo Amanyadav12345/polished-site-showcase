@@ -3,7 +3,7 @@ import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 
 export const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-secondary to-background">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-secondary/30 to-background">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/20 rounded-full blur-3xl animate-float"></div>
@@ -13,6 +13,20 @@ export const Hero = () => {
 
       <div className="container mx-auto px-6 text-center z-10">
         <div className="animate-fade-in">
+          {/* Profile Image */}
+          <div className="mb-8 flex justify-center">
+            <div className="relative">
+              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-primary to-accent p-1 shadow-2xl">
+                <div className="w-full h-full rounded-full bg-muted/20 flex items-center justify-center text-2xl font-bold text-primary border-4 border-background">
+                  Your Photo
+                </div>
+              </div>
+              <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                <div className="w-3 h-3 bg-background rounded-full animate-pulse"></div>
+              </div>
+            </div>
+          </div>
+          
           <h1 className="text-6xl md:text-8xl font-playfair font-bold mb-6 bg-gradient-to-r from-primary via-foreground to-primary bg-clip-text text-transparent">
             Creative
           </h1>

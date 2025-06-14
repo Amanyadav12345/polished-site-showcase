@@ -16,10 +16,22 @@ export const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Create mailto link with form data
+    const subject = encodeURIComponent(`Portfolio Contact from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
+    const mailtoLink = `mailto:your-email@example.com?subject=${subject}&body=${body}`;
+    
+    // Open default email client
+    window.location.href = mailtoLink;
+    
     toast({
-      title: "Message sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
+      title: "Email client opened!",
+      description: "Your default email app should open with the message pre-filled.",
     });
+    
     setFormData({ name: '', email: '', message: '' });
   };
 
@@ -116,7 +128,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground font-inter">Email</h4>
-                  <p className="text-muted-foreground">hello@example.com</p>
+                  <p className="text-muted-foreground">your-email@example.com</p>
                 </div>
               </div>
 
