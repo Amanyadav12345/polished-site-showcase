@@ -43,12 +43,25 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-secondary/30">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="py-24 bg-gradient-to-br from-orange-100 via-red-100 to-orange-150 dark:from-orange-950/30 dark:via-red-950/30 dark:to-orange-950/40 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-1/5 w-28 h-28 bg-orange-400/10 rounded-full animate-float"></div>
+        <div className="absolute top-1/2 right-1/6 w-20 h-20 bg-red-400/15 rounded-full animate-bounce-slow" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-1/4 left-1/3 w-16 h-16 bg-orange-300/20 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-1/2 right-1/5 w-24 h-24 bg-red-300/10 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+        
+        {/* Gradient orbs */}
+        <div className="absolute -top-20 -left-20 w-36 h-36 bg-gradient-to-br from-orange-400/15 to-red-500/15 rounded-full blur-xl animate-float"></div>
+        <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-gradient-to-br from-red-400/10 to-orange-500/10 rounded-full blur-xl animate-bounce-slow" style={{ animationDelay: '2.5s' }}></div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-6 text-foreground">
+          <h2 className="text-5xl md:text-6xl font-playfair font-bold mb-6 bg-gradient-to-r from-orange-500 via-red-500 to-orange-600 bg-clip-text text-transparent">
             Let's Work Together
           </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto rounded-full mb-6"></div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-inter">
             Have a project in mind? I'd love to hear about it. Let's discuss how we can 
             bring your ideas to life.
@@ -57,7 +70,7 @@ export const Contact = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           <div className="animate-slide-in">
-            <Card className="bg-card border-border shadow-xl">
+            <Card className="bg-card/80 backdrop-blur-sm border-orange-200/50 dark:border-orange-800/50 shadow-xl shadow-orange-500/10">
               <CardHeader>
                 <CardTitle className="text-2xl font-playfair text-card-foreground">
                   Send me a message
@@ -99,7 +112,7 @@ export const Contact = () => {
                   </div>
                   <Button 
                     type="submit" 
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-inter"
+                    className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-inter shadow-lg shadow-orange-500/25"
                     size="lg"
                   >
                     <Send size={20} className="mr-2" />
@@ -123,8 +136,8 @@ export const Contact = () => {
 
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <Mail size={24} className="text-primary" />
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-100 to-red-100 dark:from-orange-900/30 dark:to-red-900/30 rounded-lg flex items-center justify-center border border-orange-200 dark:border-orange-800">
+                  <Mail size={24} className="text-orange-600 dark:text-orange-400" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground font-inter">Email</h4>
@@ -133,8 +146,8 @@ export const Contact = () => {
               </div>
 
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <Phone size={24} className="text-primary" />
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-100 to-red-100 dark:from-orange-900/30 dark:to-red-900/30 rounded-lg flex items-center justify-center border border-orange-200 dark:border-orange-800">
+                  <Phone size={24} className="text-orange-600 dark:text-orange-400" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground font-inter">Phone</h4>
@@ -143,8 +156,8 @@ export const Contact = () => {
               </div>
 
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <MapPin size={24} className="text-primary" />
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-100 to-red-100 dark:from-orange-900/30 dark:to-red-900/30 rounded-lg flex items-center justify-center border border-orange-200 dark:border-orange-800">
+                  <MapPin size={24} className="text-orange-600 dark:text-orange-400" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground font-inter">Location</h4>
@@ -158,13 +171,13 @@ export const Contact = () => {
                 Let's connect on social media
               </h4>
               <div className="flex space-x-4">
-                <Button variant="outline" size="icon" className="border-primary/30 hover:bg-primary hover:text-primary-foreground">
+                <Button variant="outline" size="icon" className="border-orange-400/30 text-orange-600 dark:text-orange-400 hover:bg-gradient-to-r hover:from-orange-500 hover:to-red-500 hover:text-white transition-all duration-300">
                   <Mail size={20} />
                 </Button>
-                <Button variant="outline" size="icon" className="border-primary/30 hover:bg-primary hover:text-primary-foreground">
+                <Button variant="outline" size="icon" className="border-orange-400/30 text-orange-600 dark:text-orange-400 hover:bg-gradient-to-r hover:from-orange-500 hover:to-red-500 hover:text-white transition-all duration-300">
                   <Phone size={20} />
                 </Button>
-                <Button variant="outline" size="icon" className="border-primary/30 hover:bg-primary hover:text-primary-foreground">
+                <Button variant="outline" size="icon" className="border-orange-400/30 text-orange-600 dark:text-orange-400 hover:bg-gradient-to-r hover:from-orange-500 hover:to-red-500 hover:text-white transition-all duration-300">
                   <MapPin size={20} />
                 </Button>
               </div>

@@ -3,12 +3,20 @@ import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 
 export const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-orange-50 to-red-50 dark:via-orange-950/30 dark:to-red-950/30">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-orange-50 via-red-50 to-orange-100 dark:from-orange-950/20 dark:via-red-950/20 dark:to-orange-950/30">
       {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-orange-400 to-red-500 opacity-20 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-red-400 to-orange-500 opacity-25 rounded-full blur-3xl animate-float" style={{ animationDelay: '1.5s' }}></div>
-        <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-gradient-to-br from-orange-300 to-red-400 opacity-15 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-1/4 w-32 h-32 bg-orange-400/15 rounded-full animate-float"></div>
+        <div className="absolute top-1/3 right-1/5 w-24 h-24 bg-red-400/20 rounded-full animate-bounce-slow" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-1/4 left-1/6 w-20 h-20 bg-orange-300/25 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-28 h-28 bg-red-300/15 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/12 w-16 h-16 bg-orange-500/20 rounded-full animate-bounce-slow" style={{ animationDelay: '3s' }}></div>
+        <div className="absolute top-3/4 right-1/3 w-14 h-14 bg-red-500/25 rounded-full animate-float" style={{ animationDelay: '1.5s' }}></div>
+        
+        {/* Large gradient orbs */}
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-red-400/25 to-orange-500/25 rounded-full blur-3xl animate-float" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-gradient-to-br from-orange-300/15 to-red-400/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
       </div>
 
       <div className="container mx-auto px-6 z-10">
