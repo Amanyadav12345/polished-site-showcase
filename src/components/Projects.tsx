@@ -56,12 +56,27 @@ export const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-24 bg-background">
-      <div className="container mx-auto px-6">
+    <section id="projects" className="py-24 bg-gradient-to-br from-red-50 via-orange-50 to-red-100 dark:from-red-950/10 dark:via-orange-950/10 dark:to-red-950/20 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-1/4 w-32 h-32 bg-orange-400/10 rounded-full animate-float"></div>
+        <div className="absolute top-1/3 right-1/5 w-24 h-24 bg-red-400/15 rounded-full animate-bounce-slow" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-1/4 left-1/6 w-20 h-20 bg-orange-300/20 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-28 h-28 bg-red-300/10 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/12 w-16 h-16 bg-orange-500/15 rounded-full animate-bounce-slow" style={{ animationDelay: '3s' }}></div>
+        <div className="absolute top-3/4 right-1/3 w-14 h-14 bg-red-500/20 rounded-full animate-float" style={{ animationDelay: '1.5s' }}></div>
+        
+        {/* Gradient orbs */}
+        <div className="absolute -top-20 -left-20 w-40 h-40 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-full blur-xl animate-float"></div>
+        <div className="absolute -bottom-20 -right-20 w-48 h-48 bg-gradient-to-br from-red-400/15 to-orange-500/15 rounded-full blur-xl animate-bounce-slow" style={{ animationDelay: '2.5s' }}></div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-6 text-foreground">
+          <h2 className="text-5xl md:text-6xl font-playfair font-bold mb-6 bg-gradient-to-r from-orange-500 via-red-500 to-orange-600 bg-clip-text text-transparent">
             Featured Projects
           </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto rounded-full mb-6"></div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-inter">
             Here are some of my recent projects that showcase my skills and passion for creating 
             innovative digital solutions.
@@ -72,7 +87,7 @@ export const Projects = () => {
           {projects.map((project, index) => (
             <Card 
               key={project.title} 
-              className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-card border-border animate-fade-in"
+              className="group hover:shadow-2xl hover:shadow-orange-500/25 transition-all duration-500 hover:-translate-y-2 bg-card/80 backdrop-blur-sm border-orange-200/50 dark:border-orange-800/50 animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative overflow-hidden rounded-t-lg">
@@ -108,7 +123,7 @@ export const Projects = () => {
                     <Badge 
                       key={tech} 
                       variant="outline" 
-                      className="border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+                      className="border-orange-400/30 text-orange-600 dark:text-orange-400 hover:bg-gradient-to-r hover:from-orange-500 hover:to-red-500 hover:text-white transition-all duration-300"
                     >
                       {tech}
                     </Badge>
