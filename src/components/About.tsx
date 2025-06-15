@@ -4,8 +4,10 @@ import { Code, Coffee, Heart, Lightbulb, Rocket, Star } from "lucide-react";
 
 export const About = () => {
   const skills = [
-    "React", "TypeScript", "Next.js", "Node.js", "Python", "PostgreSQL",
-    "TailwindCSS", "Framer Motion", "AWS", "Docker", "GraphQL", "MongoDB"
+    "Java", "Python", "JavaScript", "TypeScript", "React.js", "Angular", 
+    "Node.js", "Spring Boot", "Flutter", "Django", "MySQL", "PostgreSQL", 
+    "MongoDB", "TensorFlow", "PyTorch", "Hugging Face", "LangChain", 
+    "Mistral", "TinyLLaMA", "RAG", "NLP", "Docker", "REST APIs"
   ];
 
   return (
@@ -34,8 +36,8 @@ export const About = () => {
               <div className="w-80 h-80 mx-auto bg-gradient-to-br from-orange-400 via-red-500 to-orange-600 rounded-3xl p-3 shadow-2xl shadow-orange-500/25 transform hover:scale-105 transition-all duration-500">
                 <div className="w-full h-full rounded-2xl bg-gradient-to-br from-orange-100 to-red-100 dark:from-orange-900/50 dark:to-red-900/50 flex items-center justify-center text-2xl font-bold text-orange-600 dark:text-orange-400 border-4 border-white dark:border-orange-950/50 overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=400&fit=crop&crop=face" 
-                    alt="Professional headshot" 
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" 
+                    alt="Aman Yadav - Full Stack Developer" 
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -74,27 +76,28 @@ export const About = () => {
               <div className="space-y-6 text-lg text-muted-foreground font-inter leading-relaxed">
                 <div className="animate-slide-in" style={{ animationDelay: '0.5s' }}>
                   <p className="bg-gradient-to-r from-orange-600 to-red-600 dark:from-orange-400 dark:to-red-400 bg-clip-text text-transparent font-semibold text-xl mb-4">
-                    Hey there! 👋
+                    Hi, I'm Aman Yadav! 👋
                   </p>
                   <p>
-                    I'm a passionate full-stack developer with over 5 years of experience creating 
-                    beautiful, functional, and user-centered digital experiences. I combine technical 
-                    expertise with creative problem-solving to deliver exceptional results.
+                    I'm a versatile Full Stack Developer with 4+ years of experience building scalable 
+                    web and mobile applications. Currently working as a Software Engineer at Faberwork, 
+                    I specialize in technologies like Spring Boot, React.js, Angular, Node.js, and Flutter.
                   </p>
                 </div>
                 
                 <div className="animate-slide-in" style={{ animationDelay: '0.7s' }}>
                   <p>
-                    My journey began with a curiosity for how things work, which led me to explore 
-                    the intersection of design and technology. Today, I specialize in building 
-                    scalable web applications that not only look great but perform flawlessly.
+                    I'm passionate about GenAI and have extensive experience in Retrieval-Augmented 
+                    Generation (RAG) and NLP using models like Mistral and TinyLLaMA for healthcare applications. 
+                    I've delivered 10+ production-grade solutions for enterprise clients including Shell, Dell, and Airtel.
                   </p>
                 </div>
                 
                 <div className="animate-slide-in" style={{ animationDelay: '0.9s' }}>
                   <p>
-                    When I'm not coding, you'll find me exploring new technologies, contributing to 
-                    open-source projects, or sharing knowledge with the developer community.
+                    From Jaipur, Rajasthan, I love integrating AI into real-world applications for tasks 
+                    like text generation, summarization, and intelligent agent design. I'm always exploring 
+                    new technologies to deliver impactful solutions using modern frameworks and clean architecture.
                   </p>
                 </div>
               </div>
@@ -103,16 +106,50 @@ export const About = () => {
               <div className="grid grid-cols-2 gap-4 my-8 animate-fade-in" style={{ animationDelay: '1.1s' }}>
                 <Card className="bg-gradient-to-br from-orange-100 to-red-100 dark:from-orange-900/30 dark:to-red-900/30 border-orange-200 dark:border-orange-800 hover:scale-105 transition-transform duration-300">
                   <CardContent className="p-6 text-center">
-                    <div className="text-3xl font-bold text-orange-600 dark:text-orange-400">5+</div>
+                    <div className="text-3xl font-bold text-orange-600 dark:text-orange-400">4+</div>
                     <div className="text-sm text-muted-foreground">Years Experience</div>
                   </CardContent>
                 </Card>
                 <Card className="bg-gradient-to-br from-red-100 to-orange-100 dark:from-red-900/30 dark:to-orange-900/30 border-red-200 dark:border-red-800 hover:scale-105 transition-transform duration-300">
                   <CardContent className="p-6 text-center">
-                    <div className="text-3xl font-bold text-red-600 dark:text-red-400">50+</div>
-                    <div className="text-sm text-muted-foreground">Projects Done</div>
+                    <div className="text-3xl font-bold text-red-600 dark:text-red-400">10+</div>
+                    <div className="text-sm text-muted-foreground">Production Projects</div>
                   </CardContent>
                 </Card>
+              </div>
+
+              {/* Additional Stats */}
+              <div className="grid grid-cols-2 gap-4 my-8 animate-fade-in" style={{ animationDelay: '1.2s' }}>
+                <Card className="bg-gradient-to-br from-purple-100 to-blue-100 dark:from-purple-900/30 dark:to-blue-900/30 border-purple-200 dark:border-purple-800 hover:scale-105 transition-transform duration-300">
+                  <CardContent className="p-6 text-center">
+                    <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">B.Tech</div>
+                    <div className="text-sm text-muted-foreground">CSE Graduate</div>
+                  </CardContent>
+                </Card>
+                <Card className="bg-gradient-to-br from-green-100 to-teal-100 dark:from-green-900/30 dark:to-teal-900/30 border-green-200 dark:border-green-800 hover:scale-105 transition-transform duration-300">
+                  <CardContent className="p-6 text-center">
+                    <div className="text-3xl font-bold text-green-600 dark:text-green-400">AI/ML</div>
+                    <div className="text-sm text-muted-foreground">Specialist</div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Specializations */}
+              <div className="mt-8 animate-fade-in" style={{ animationDelay: '1.25s' }}>
+                <h4 className="text-lg font-playfair font-semibold mb-4 bg-gradient-to-r from-orange-600 to-red-600 dark:from-orange-400 dark:to-red-400 bg-clip-text text-transparent">
+                  Specializations
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {["Full Stack Development", "GenAI & RAG", "Healthcare AI", "Microservices", "Test Automation"].map((spec, index) => (
+                    <Badge 
+                      key={spec} 
+                      variant="outline" 
+                      className="px-3 py-1 text-xs font-inter bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800 hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-all duration-300"
+                    >
+                      {spec}
+                    </Badge>
+                  ))}
+                </div>
               </div>
 
               {/* Skills section */}
@@ -126,7 +163,7 @@ export const About = () => {
                       key={skill} 
                       variant="secondary" 
                       className="px-4 py-2 text-sm font-inter bg-gradient-to-r from-orange-100 to-red-100 dark:from-orange-900/30 dark:to-red-900/30 text-orange-700 dark:text-orange-300 hover:from-orange-500 hover:to-red-500 hover:text-white transition-all duration-300 transform hover:scale-110 animate-slide-in border border-orange-200 dark:border-orange-800"
-                      style={{ animationDelay: `${1.5 + index * 0.1}s` }}
+                      style={{ animationDelay: `${1.5 + index * 0.05}s` }}
                     >
                       {skill}
                     </Badge>
