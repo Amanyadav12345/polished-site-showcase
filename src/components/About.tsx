@@ -31,7 +31,7 @@ export const About = () => {
               {/* Main photo container with enhanced styling */}
               <div className="w-80 h-80 mx-auto bg-gradient-to-br from-orange-400 via-red-500 to-orange-600 rounded-3xl p-3 shadow-2xl shadow-orange-500/25 transform hover:scale-105 transition-all duration-500">
                 <div className="w-full h-full rounded-2xl bg-gradient-to-br from-orange-100 to-red-100 dark:from-orange-900/50 dark:to-red-900/50 flex items-center justify-center text-2xl font-bold text-orange-600 dark:text-orange-400 border-4 border-white dark:border-orange-950/50 overflow-hidden">
-                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" alt="Aman Yadav - Full Stack Developer" className="w-full h-full object-cover" />
+                  <img alt="Aman Yadav - Full Stack Developer" src="/lovable-uploads/294c9ebe-cdef-4e55-9b2d-128155cf2dce.png" className="object-contain" />
                 </div>
               </div>
               
