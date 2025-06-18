@@ -1,7 +1,26 @@
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { useEffect, useState } from "react";
 export const Hero = () => {
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const checkTheme = () => {
+      setIsDark(document.documentElement.classList.contains('dark'));
+    };
+    
+    checkTheme();
+    
+    const observer = new MutationObserver(checkTheme);
+    observer.observe(document.documentElement, { 
+      attributes: true, 
+      attributeFilter: ['class'] 
+    });
+    
+    return () => observer.disconnect();
+  }, []);
+
   return <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-orange-50 via-red-50 to-orange-100 dark:from-orange-950/20 dark:via-red-950/20 dark:to-orange-950/30">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -69,9 +88,16 @@ export const Hero = () => {
           animationDelay: '0.3s'
         }}>
             <div className="relative">
-              <div className="w-80 h-80 md:w-96 md:h-96 rounded-3xl bg-gradient-to-br from-orange-400 via-red-500 to-orange-600 p-2 shadow-2xl shadow-orange-500/25 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+              <div className="w-72 h-72 md:w-80 md:h-80 rounded-3xl bg-gradient-to-br from-orange-400 via-red-500 to-orange-600 p-2 shadow-2xl shadow-orange-500/25 transform rotate-3 hover:rotate-0 transition-transform duration-500">
                 <Avatar className="w-full h-full rounded-2xl border-4 border-white dark:border-orange-950/50">
-                  <AvatarImage src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=400&fit=crop&crop=face" alt="Profile" className="object-cover" />
+                  <AvatarImage 
+                    src={isDark 
+                      ? "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=400&fit=crop&crop=face" 
+                      : "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&h=400&fit=crop&crop=face"
+                    } 
+                    alt="Profile" 
+                    className="object-cover" 
+                  />
                   <AvatarFallback className="bg-gradient-to-br from-orange-100 to-red-100 dark:from-orange-900/50 dark:to-red-900/50 text-3xl font-bold text-orange-600 dark:text-orange-400">
                     CD
                   </AvatarFallback>
