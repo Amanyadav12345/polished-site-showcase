@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 
 export const Hero = () => {
@@ -59,9 +60,16 @@ export const Hero = () => {
           <div className="flex justify-center lg:justify-end animate-fade-in" style={{ animationDelay: '0.3s' }}>
             <div className="relative">
               <div className="w-80 h-80 md:w-96 md:h-96 rounded-3xl bg-gradient-to-br from-orange-400 via-red-500 to-orange-600 p-2 shadow-2xl shadow-orange-500/25 transform rotate-3 hover:rotate-0 transition-transform duration-500">
-                <div className="w-full h-full rounded-2xl bg-gradient-to-br from-orange-100 to-red-100 dark:from-orange-900/50 dark:to-red-900/50 flex items-center justify-center text-3xl font-bold text-orange-600 dark:text-orange-400 border-4 border-white dark:border-orange-950/50">
-                  Your Photo
-                </div>
+                <Avatar className="w-full h-full rounded-2xl border-4 border-white dark:border-orange-950/50">
+                  <AvatarImage 
+                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=400&fit=crop&crop=face" 
+                    alt="Profile"
+                    className="object-cover"
+                  />
+                  <AvatarFallback className="bg-gradient-to-br from-orange-100 to-red-100 dark:from-orange-900/50 dark:to-red-900/50 text-3xl font-bold text-orange-600 dark:text-orange-400">
+                    CD
+                  </AvatarFallback>
+                </Avatar>
               </div>
               {/* Floating elements around photo */}
               <div className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-red-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
