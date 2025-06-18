@@ -290,13 +290,8 @@ ${formData.name}`);
 
             {/* Additional CTA */}
             <div className="">
-              <h4 className="font-semibold text-foreground font-inter mb-2">
-                Available for Freelance & Full-time Opportunities
-              </h4>
-              <p className="text-sm text-muted-foreground">
-                Currently working at Faberwork and open to discussing exciting new projects 
-                in AI/ML, full-stack development, and enterprise solutions.
-              </p>
+              <h4 className="font-semibold text-foreground font-inter mb-2"></h4>
+              <p className="text-sm text-muted-foreground"></p>
             </div>
           </div>
         </div>
